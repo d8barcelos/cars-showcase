@@ -1,8 +1,12 @@
 import { CustomFilter, SearchBar } from '@/components'
 import  Hero  from '../components/Hero'
 import Image from 'next/image'
+import { fetchCars } from '@/utils';
 
-export default function Home() {
+export default async function Home() {
+  const allCars = await fetchCars();
+
+
   return (
     <main>
       <Hero/>
@@ -20,7 +24,6 @@ export default function Home() {
             <CustomFilter title="fuel" />
             <CustomFilter title="year" />
           </div>
-
         </div>
       </div>
     </main>
