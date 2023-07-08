@@ -13,6 +13,8 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
   return rentalRatePerDay.toFixed(0);
 };
 
+// API connection
+
 export async function fetchCars () {
   const headers = {
     'X-RapidAPI-Key': '20cd5a87d4mshc02fc84cecfca6bp13bbf4jsn2a5f973259f5',
